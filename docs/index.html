@@ -1,24 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <meta charset="UTF-8">
+    <title>数字媒体技术——数据结构</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="数字媒体技术——数据结构">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//npm.elemecdn.com/docsify-darklight-theme@3/dist/docsify-themeable/style.min.css">
+    <link rel="stylesheet" href="//npm.elemecdn.com/docsify-themeable@0/dist/css/theme-simple.css" title="light">
+    <link rel="stylesheet alternative" href="//npm.elemecdn.com/docsify-themeable@0/dist/css/theme-simple-dark.css" title="dark">
+    <link rel="stylesheet" href="//npm.elemecdn.com/gitalk/dist/gitalk.css">
+    <link rel="stylesheet" href="//npm.elemecdn.com/katex@latest/dist/katex.min.css"/>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/icons/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '���ݽṹ',
-      repo: 'https://github.com/shanzuiyixing/DATASTRUCTURE.git'
+      name: '数据结构',
+      repo: 'https://github.com/shanzuiyixing/DATASTRUCTURE.git',
+      loadSidebar: 'toc.md',
+      subMaxLevel: 3,
+      search: {
+        paths: 'auto',
+        placeholder: '搜索文档内容'
+      },
+      loadFooter: 'footer.md',
+      auto2top: true,
+      customPageTitle: {
+        suffix: '数据结构'
+      },
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      copyCode: {
+        buttonText : '复制',
+        errorText  : '错误',
+        successText: '已复制'
+      }
     }
   </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-java.min.js"></script>
+  <script src="//npm.elemecdn.com/docsify/lib/docsify.min.js"></script>
+  <script src="//npm.elemecdn.com/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+  <script src="//npm.elemecdn.com/docsify-darklight-theme@3/dist/docsify-themeable/main.min.js"></script>
+  <script src="//npm.elemecdn.com/docsify-darklight-theme@3/dist/docsify-themeable/index.min.js"></script>
+  <script src="//npm.elemecdn.com/docsify/lib/plugins/search.min.js"></script>
+  <script src="//npm.elemecdn.com/prismjs@1/components/prism-c.min.js"></script>
+  <script src="//npm.elemecdn.com/prismjs@1/components/prism-cpp.min.js"></script>
+  <script src="//npm.elemecdn.com/prismjs@1/components/prism-ebnf.min.js"></script>
+  <script src="//npm.elemecdn.com/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//npm.elemecdn.com/prismjs@1/components/prism-makefile.min.js"></script>
+  <script src="//npm.elemecdn.com/prismjs@1/components/prism-bison.min.js"></script>
+  <script src="//npm.elemecdn.com/prismjs@1/components/prism-rust.min.js"></script>
+  <script src="//npm.elemecdn.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//npm.elemecdn.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="//npm.elemecdn.com/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+  <script src="//npm.elemecdn.com/@sujaykumarh/docsify-plugin-title@1.x/dist/plugin.min.js"></script>
+  <script src="//npm.elemecdn.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//npm.elemecdn.com/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <script src="//npm.elemecdn.com/docsify-copy-code@2.1.0/dist/docsify-copy-code.min.js"></script>
+  <script src="assets/js/sidebar.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '37025e12cf1bb49f657a',
+      clientSecret: '1878173781753c925c7d97ec5a9d754f5bbd1145',
+      repo: 'online-doc',
+      owner: 'pku-minic',
+      admin: ['Shanzuiyixing'],
+      id: document.title,
+      distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container')
+  </script>
 </body>
 </html>
